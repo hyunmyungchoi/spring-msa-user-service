@@ -1,4 +1,4 @@
-package com.springmsa.userservice.internal.dto;
+package com.springmsa.userservice.user.dto;
 
 import java.util.Set;
 

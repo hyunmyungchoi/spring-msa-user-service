@@ -1,8 +1,11 @@
-package com.springmsa.userservice;
+package com.springmsa.userservice.health.controller;
 
+import com.springmsa.common.web.response.MsaResponse;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Map;
 
 @RestController
 public class DbHealthController {
@@ -14,8 +17,12 @@ public class DbHealthController {
     }
 
     @GetMapping("/db-health")
-    public String dbHealth() {
+    public MsaResponse<Map<String, Object>> dbHealth() {
         Integer result = jdbcTemplate.queryForObject("SELECT 1", Integer.class);
-        return "DB connection OK: " + result;
+        return MsaResponse.ok(Map.of(
+                "service", "spring-user-service",
+                "status", "UP",
+                "database", result
+        ));
     }
 }

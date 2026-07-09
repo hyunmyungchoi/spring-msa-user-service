@@ -1,6 +1,8 @@
-package com.springmsa.userservice.internal;
+package com.springmsa.userservice.user.controller;
 
-import com.springmsa.userservice.internal.dto.UserResponse;
+import com.springmsa.common.web.response.MsaResponse;
+import com.springmsa.userservice.user.dto.UserResponse;
+import com.springmsa.userservice.user.service.InternalUserQueryService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +19,7 @@ public class InternalUserController {
     }
 
     @GetMapping("/login-id/{loginId}")
-    public UserResponse findByLoginId(@PathVariable String loginId) {
-        return internalUserQueryService.findByLoginId(loginId);
+    public MsaResponse<UserResponse> findByLoginId(@PathVariable String loginId) {
+        return MsaResponse.ok(internalUserQueryService.findByLoginId(loginId));
     }
 }

@@ -1,4 +1,4 @@
-package com.springmsa.userservice.api.dto;
+package com.springmsa.userservice.user.dto;
 
 import org.jspecify.annotations.NullMarked;
 

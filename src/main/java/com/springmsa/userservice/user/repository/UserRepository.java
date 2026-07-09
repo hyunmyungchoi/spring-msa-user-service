@@ -1,6 +1,6 @@
-package com.springmsa.userservice.repository;
+package com.springmsa.userservice.user.repository;
 
-import com.springmsa.userservice.domain.User;
+import com.springmsa.userservice.user.domain.User;
 import org.jspecify.annotations.NonNull;
 import org.springframework.data.jpa.repository.JpaRepository;
 

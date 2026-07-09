@@ -1,8 +1,8 @@
-package com.springmsa.userservice.internal;
+package com.springmsa.userservice.user.service;
 
-import com.springmsa.userservice.domain.User;
-import com.springmsa.userservice.internal.dto.UserResponse;
-import com.springmsa.userservice.repository.UserRepository;
+import com.springmsa.userservice.user.domain.User;
+import com.springmsa.userservice.user.dto.UserResponse;
+import com.springmsa.userservice.user.repository.UserRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

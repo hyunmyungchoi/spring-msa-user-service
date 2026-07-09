@@ -1,4 +1,4 @@
-package com.springmsa.userservice.internal.dto;
+package com.springmsa.userservice.user.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

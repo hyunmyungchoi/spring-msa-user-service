@@ -1,4 +1,4 @@
-package com.springmsa.userservice.domain;
+package com.springmsa.userservice.user.domain;
 
 import jakarta.persistence.CollectionTable;
 import jakarta.persistence.Column;

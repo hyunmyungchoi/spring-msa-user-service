@@ -1,7 +1,8 @@
-package com.springmsa.userservice.api;
+package com.springmsa.userservice.user.controller;
 
-import com.springmsa.userservice.admin.UserAdminQueryService;
-import com.springmsa.userservice.admin.dto.AdminUserResponse;
+import com.springmsa.common.web.response.MsaResponse;
+import com.springmsa.userservice.user.dto.AdminUserResponse;
+import com.springmsa.userservice.user.service.UserAdminQueryService;
 import org.jspecify.annotations.NullMarked;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,12 +23,12 @@ public class UserAdminApiController {
     }
 
     @GetMapping("/users")
-    public List<AdminUserResponse> users() {
-        return userAdminQueryService.findUsers();
+    public MsaResponse<List<AdminUserResponse>> users() {
+        return MsaResponse.ok(userAdminQueryService.findUsers());
     }
 
     @GetMapping("/users/{userId}")
-    public AdminUserResponse user(@PathVariable Long userId) {
-        return userAdminQueryService.findUser(userId);
+    public MsaResponse<AdminUserResponse> user(@PathVariable Long userId) {
+        return MsaResponse.ok(userAdminQueryService.findUser(userId));
     }
 }

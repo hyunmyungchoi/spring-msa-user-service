@@ -1,6 +1,6 @@
-package com.springmsa.userservice.internal.dto;
+package com.springmsa.userservice.user.dto;
 
-import com.springmsa.userservice.domain.User;
+import com.springmsa.userservice.user.domain.User;
 
 import java.util.Set;
 

@@ -1,7 +1,7 @@
-package com.springmsa.userservice.admin;
+package com.springmsa.userservice.user.service;
 
-import com.springmsa.userservice.admin.dto.AdminUserResponse;
-import com.springmsa.userservice.repository.UserRepository;
+import com.springmsa.userservice.user.dto.AdminUserResponse;
+import com.springmsa.userservice.user.repository.UserRepository;
 import org.jspecify.annotations.NullMarked;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
