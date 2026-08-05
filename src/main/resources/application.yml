@@ -8,6 +8,10 @@ spring:
     default-schema: user_service
     schemas: user_service
     create-schemas: true
+  jpa:
+    properties:
+      hibernate:
+        default_schema: user_service
   kafka:
     bootstrap-servers: ${SPRING_KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
     producer:
