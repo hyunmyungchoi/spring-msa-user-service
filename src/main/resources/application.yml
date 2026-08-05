@@ -4,6 +4,10 @@ server:
 spring:
   application:
     name: spring-user-service
+  flyway:
+    default-schema: user_service
+    schemas: user_service
+    create-schemas: true
   kafka:
     bootstrap-servers: ${SPRING_KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
     producer:
