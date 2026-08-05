@@ -51,6 +51,15 @@ tasks.register('migrateDatabase', JavaExec) {
     mainClass = 'com.springmsa.userservice.migration.FlywayMigrationMain'
 }
 
+tasks.register('repairDatabase', JavaExec) {
+    group = 'database'
+    description = 'Repairs Flyway migration metadata for the user_service schema.'
+    dependsOn tasks.named('classes')
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'com.springmsa.userservice.migration.FlywayMigrationMain'
+    args 'repair'
+}
+
 tasks.register('bootstrapAdmin', JavaExec) {
     group = 'database'
     description = 'Creates the single administrator account idempotently.'
